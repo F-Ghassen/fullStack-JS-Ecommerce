@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "npm run clean && tsc",
+    "serve": "node ./dist/app.js",
+    "start:watch": "cross-env ENABLE_CACHING=false && tsc-watch --noClear -p ./tsconfig.json --onSuccess \"npm run serve\"",
+    "start": "npm run build:dev && cross-env ENABLE_CACHING=false && npm run serve"
+  },
+  "keywords": [],
+  "author": "Ghassen Fathallah",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
