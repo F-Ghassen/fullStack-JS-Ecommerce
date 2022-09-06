@@ -1,13 +1,25 @@
 {
-    "compilerOptions": {
+   "compilerOptions": {
+      "lib": [
+         "es5",
+         "es6"
+      ],
       "module": "commonjs",
       "esModuleInterop": true,
       "target": "es6",
       "moduleResolution": "node",
+      
+      //postgres related start
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      //postgres related end
+      
       "sourceMap": true,
       "outDir": "dist",
       // "strict": true, /* Enable all strict type-checking options. */,
       "strict": true,
+      //otherwise typescript will force us to create a constructure for each class
+      "strictPropertyInitialization": false
     },
     "lib": ["es2015"],
     "exclude": ["node_modules"],

@@ -38,4 +38,4 @@ data_source_1.AppDataSource.initialize()
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
 });
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=index.js.map
